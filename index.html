@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Task List</title>
+  </head>
+  <body>
+    <main class="app">
+      <!-- Greeting -->
+      <section class="greeting">
+        <h2 class="title">
+          Task Tracker
+        </h2>
+      </section>
+      <!-- End of Greeting -->
+
+      <!-- New task -->
+      <section class="create-task">
+    
+        <form id="new-task-form">
+          <h2>Insert Tasks</h2>
+          <input
+            type="text"
+            placeholder="What do you need to do?"
+            name="content"
+            id="content"
+            required
+          />
+
+          <h4>Pick a category</h4>
+          <div class="options">
+            <label>
+              <input
+                type="radio"
+                name="category"
+                id="category1"
+                value="business"
+              />
+              <span class="bubble business"></span>
+              <div>Business</div>
+            </label>
+            <label>
+              <input
+                type="radio"
+                name="category"
+                id="category2"
+                value="personal"
+              />
+              <span class="bubble personal"></span>
+              <div>Personal</div>
+            </label>
+          </div>
+
+          <input type="submit" value="Add task" />
+        </form>
+      </section>
+
+      <section class="task-list">
+        <h3>Tasks to Complete</h3>
+        <div class="list" id="task-list"></div>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
