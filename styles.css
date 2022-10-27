@@ -4,16 +4,14 @@
     --business: #4d90de;
     --personal: var(--primary);
     --light: #53c6d8;
-    --grey: rgb(244, 101, 83);
-    --dark: #37425d;
-    --destroy: #ff5b57;
-    --pink: #ffe7ff;
-    --purple: #8b5cf6;
+    --red: rgb(244, 101, 83);
+    --blk: #37425d;
+    --subtract: rgb(255, 90, 87);
 
-    --shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    --shadow: 0 1px 3px rgba(14, 12, 12, 0.1);
 
-    --business-glow: 0px 0px 4px rgba(232, 140, 115, 0.75);
-    --personal-glow: 0px 0px 4px rgba(234, 186, 64, 0.75);
+    --business-glow: 0px 0px 4px rgba(224, 83, 73, 0.75);
+    --personal-glow: 0px 0px 4px rgba(63, 189, 217, 0.75);
 }
 
 /* End of Variables */
@@ -39,7 +37,7 @@ button {
 
 body {
     background: var(--light);
-    color: var(--dark);
+    color: var(--blk);
 }
 
 section {
@@ -50,14 +48,14 @@ section {
 }
 
 h3 {
-    color: var(--dark);
+    color: var(--blk);
     font-size: 1rem;
     font-weight: 400;
     margin-bottom: 0.5rem;
 }
 
 h4 {
-    color: var(--grey);
+    color: var(--red);
     font-size: 0.875rem;
     font-weight: 700;
     margin-bottom: 0.5rem;
@@ -75,17 +73,9 @@ h4 {
 
 .greeting .title,
 .greeting .title input {
-    color: var(--dark);
+    color: var(--blk);
     font-size: 1.5rem;
     font-weight: 700;
-}
-
-#name {
-    color: var(--pink);
-    background-image: linear-gradient(to right, var(--pink), var(--purple));
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
 }
 
 .create-task input[type="text"] {
@@ -93,7 +83,7 @@ h4 {
     width: 100%;
     font-size: 1.125rem;
     padding: 1rem 1.5rem;
-    color: var(--dark);
+    color: var(--blk);
     background-color: #fff;
     border-radius: 0.5rem;
     box-shadow: var(--shadow);
@@ -164,7 +154,7 @@ input:checked~.bubble::after {
 }
 
 .create-task .options label div {
-    color: var(--dark);
+    color: var(--blk);
     font-size: 1.125rem;
     margin-top: 1rem;
 }
@@ -213,7 +203,7 @@ input:checked~.bubble::after {
 }
 
 .task-item .task-content input {
-    color: var(--dark);
+    color: var(--blk);
     font-size: 1.125rem;
 }
 
@@ -241,10 +231,36 @@ input:checked~.bubble::after {
 }
 
 .task-item .actions .delete {
-    background-color: var(--destroy);
+    background-color: var(--subtract);
 }
 
 .task-item.done .task-content input {
     text-decoration: line-through;
-    color: var(--grey);
+    color: var(--red);
+}
+
+
+@media screen and (max-width: 600px) {
+    body {
+    }
+  }
+  
+
+
+
+
+
+
+
+
+
+
+
+/*
+#name {
+    color: var(--pink);
+    background-image: linear-gradient(to right, var(--pink), var(--purple));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
 }

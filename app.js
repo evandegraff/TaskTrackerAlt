@@ -35,10 +35,10 @@ window.addEventListener("load", () => {
       tasks.push(task);
   
       localStorage.setItem("tasks", JSON.stringify(tasks));
-  // Then it resets so they can start over if they want. 
+  // it then resets the page when refreshed and we stringify the data so that it can be displayed in the html
       // Reset the form
       e.target.reset();
-  // Displays our tasks here and updates them based on user changes / inputs. 
+  // Displays our tasks here and allows them to be updated
       DisplayTasks();
     });
   
@@ -60,6 +60,7 @@ window.addEventListener("load", () => {
       const actions = document.createElement("div");
       const edit = document.createElement("button");
       const deleteButton = document.createElement("button");
+      
   // Creating checkbox and done button for tasks.
       input.type = "checkbox";
       input.checked = task.done;
